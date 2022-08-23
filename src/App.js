@@ -1,7 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import logo from "./logo.svg";
+import Khalti from "./components/khalti";
 
 function App() {
+  const [displayKhalti, setDisplayKhalti] = useState(true);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +21,7 @@ function App() {
         >
           Learn React
         </a>
+        <Khalti display={displayKhalti} amount={100 * 1000} config={{}} />
       </header>
     </div>
   );
